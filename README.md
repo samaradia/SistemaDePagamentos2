@@ -1,50 +1,35 @@
-# Sistema de Pagamentos - Java
+# 💳 Sistema de Pagamentos em Java
 
-Primeira versão de um sistema de pagamentos desenvolvido em Java para praticar Programação Orientada a Objetos (POO).
+Projeto desenvolvido durante meus estudos de **Programação Orientada a Objetos (POO)** utilizando Java.
 
-O projeto simula diferentes formas de pagamento utilizando herança, polimorfismo e sobrescrita de métodos.
+## 🚀 Sobre o projeto
 
-## Funcionalidades
+O sistema simula diferentes formas de pagamento, aplicando conceitos importantes de POO.
 
-- Pagamento por Cartão de Crédito
-- Pagamento por Boleto Bancário
-- Pagamento via Pix
-- Cálculo de taxas
-- Verificação de limite do cartão
-- Desconto para pagamentos via Pix
+### Formas de pagamento
 
-## Conceitos utilizados
+- 💳 Cartão de Crédito
+- 📄 Boleto Bancário
+- ⚡ Pix
+
+## 📚 Conceitos utilizados
 
 - Herança
 - Polimorfismo
 - Encapsulamento
 - Sobrescrita de métodos (`@Override`)
-- Construtores
-- Classes e objetos
 
-## Estrutura
+## 🛠️ Tecnologias
 
-- `Pagamentos` - Classe base.
-- `CartaoDeCredito` - Pagamento com cartão.
-- `BoletoBancario` - Pagamento por boleto.
-- `Pix` - Pagamento via Pix.
-- `Main` - Classe principal.
+- Java
+- Programação Orientada a Objetos
 
-## Próximas melhorias
+## 🔄 Próximos passos
 
-Este projeto continuará sendo desenvolvido conforme eu aprender novos conteúdos, como:
+Essa é a primeira versão do projeto. Pretendo continuar evoluindo e futuramente adicionar:
 
-- Tratamento de exceções
-- Manipulação de Strings
-- Collections
-- Persistência com Banco de Dados
-- Interface gráfica ou API
+- Banco de dados
+- Spring Boot
+- Novas funcionalidades
 
-## Como executar
-
-1. Compile os arquivos `.java`.
-2. Execute a classe `Main`.
-
----
-
-Projeto desenvolvido para praticar Java e Programação Orientada a Objetos.
+🚀 Projeto desenvolvido para praticar e acompanhar minha evolução em Java.
