@@ -9,12 +9,9 @@ public class CartaoCredito extends Pagamentos {
         this.limiteDoCartao = limiteDoCartao;
     }
 
-    public void realizarCompra(double valorDaCompra){
-        if(valorDaCompra <= limiteDoCartao){
-            System.out.println("Autorizado, aguarde  confirmação de pagamento!");
-        } else {
-            System.out.println("Não foi autorizado sua compra!");
-        }
+    public boolean realizarCompra(double valorDaCompra){
+        return valorDaCompra <= limiteDoCartao;
+
 
     }
 
