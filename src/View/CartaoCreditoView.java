@@ -11,7 +11,8 @@ public class CartaoCreditoView {
         }
 
     }
-    public void exibirConfirmacao(){
-        System.out.printf("Pagamento confirmado no Cartão de Crédito." );
+    public void exibirConfirmacao(CartaoCredito cartaoCredito){
+        System.out.printf("Pagamento confirmado no Cartão de Crédito." +
+                "O valor final ficou de: "+ cartaoCredito.valorFinal());
     }
 }

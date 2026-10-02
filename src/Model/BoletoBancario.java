@@ -27,9 +27,9 @@ public class BoletoBancario extends Pagamentos {
         valor += calcularTaxa();
     }
 
-    public double valorFinal(){
-       return valor;
-}
+    public double valorFinal() {
+        return valor;
+    }
 }
 
 

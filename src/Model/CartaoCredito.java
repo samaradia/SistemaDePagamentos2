@@ -16,7 +16,7 @@ public class CartaoCredito extends Pagamentos {
 
     @Override
     public void confirmarPagamento() {
-        valor += calcularTaxa();
+        valor = calcularTaxa();
     }
 
     @Override
@@ -28,7 +28,8 @@ public class CartaoCredito extends Pagamentos {
         }
     }
 
-
-
+    public double valorFinal(){
+        return valor;
+    }
 
 }
