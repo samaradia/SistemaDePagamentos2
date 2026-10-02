@@ -2,14 +2,19 @@ package Model;
 
 public class BoletoBancario extends Pagamentos {
 
-    private double diasDeAtraso;
+    private int diasDeAtraso;
 
-    public BoletoBancario(double valor, double diasDeAtraso) {
+    public BoletoBancario(double valor, int diasDeAtraso) {
         super(valor);
-        this.diasDeAtraso =diasDeAtraso;
+        this.diasDeAtraso = diasDeAtraso;
     }
 
-    public double multaDeAtraso(int diasDeAtraso){
+    public int getDiasDeAtraso() {
+        return diasDeAtraso;
+    }
+
+    @Override
+    public double calcularTaxa() {
         if(diasDeAtraso <= 0 ){
             return 0;
         } else {
@@ -19,12 +24,12 @@ public class BoletoBancario extends Pagamentos {
 
     @Override
     public void confirmarPagamento() {
-        System.out.printf("Boleto de R$%.2f gerado com sucesso (Taxa: R$%.2f)\n",
-        valor, calcularTaxa());
+        valor += calcularTaxa();
     }
 
-    @Override
-    public double calcularTaxa() {
-        return valor * 0.1;
-    }
+    public double valorFinal(){
+       return valor;
 }
+}
+
+
