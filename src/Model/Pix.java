@@ -8,12 +8,16 @@ public class Pix extends Pagamentos {
         super(valor);
     }
 
-    public double efetuarDesconto(){
-        return valor- 0.2;
+
+    @Override
+    public double calcularTaxa() {
+        return valor - (valor * 0.05);
     }
 
     @Override
     public void confirmarPagamento() {
-        System.out.printf("Pagamento via Model.Pix de: " + valor + " confirmado.");
+       valor = calcularTaxa();
     }
+
+
 }
