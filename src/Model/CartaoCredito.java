@@ -12,13 +12,11 @@ public class CartaoCredito extends Pagamentos {
     public boolean realizarCompra(double valorDaCompra){
         return valorDaCompra <= limiteDoCartao;
 
-
     }
 
     @Override
     public void confirmarPagamento() {
-        System.out.printf("Pagamento de R$%.2f confirmado no Cartão de Crédito (Taxa: R$%.2f)\n",
-                valor, calcularTaxa());
+        valor += calcularTaxa();
     }
 
     @Override
