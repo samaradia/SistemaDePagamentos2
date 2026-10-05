@@ -8,6 +8,11 @@ public class PixView {
                 "totalizando com o desconto:  " + pix.calcularTaxa());
     }
 
+    public void mostrarMensagens(String mensagens){
+        System.out.println("\n" + mensagens);
+    }
+
+
     public void exibirPixConfirmado(){
         System.out.println("Pagamento no pix confirmado com sucesso!");
     }

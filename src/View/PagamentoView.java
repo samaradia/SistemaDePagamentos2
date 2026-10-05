@@ -11,6 +11,10 @@ public class PagamentoView {
         System.out.println("3 - Pix");
     }
 
+    public void mostrarMensagens(String mensagens){
+        System.out.println("\n" + mensagens);
+    }
+
     public void exibirConfirmacao(Pagamentos pagamentos){
         System.out.println("Pagamento confirmado de: " + pagamentos.getValor());
     }

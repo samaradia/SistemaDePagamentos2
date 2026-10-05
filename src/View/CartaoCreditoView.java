@@ -11,6 +11,11 @@ public class CartaoCreditoView {
         }
 
     }
+
+    public void mostrarMensagens(String mensagens){
+        System.out.println("\n" + mensagens);
+    }
+
     public void exibirConfirmacao(CartaoCredito cartaoCredito){
         System.out.printf("Pagamento confirmado no Cartão de Crédito." +
                 "O valor final ficou de: "+ cartaoCredito.valorFinal());
