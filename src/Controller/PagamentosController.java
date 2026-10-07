@@ -27,14 +27,17 @@ public class PagamentosController {
 
             if (opcao == 1) {
                 pagamentoView.mostrarMensagens("Digite o valor a ser Pago: ");
+
             } else if (opcao == 2){
                 pagamentoView.mostrarMensagens("Digite o valor a ser  pago: ");
             } else if (opcao == 3 ) {
                 pagamentoView.mostrarMensagens("Digite o valor a ser  pago: ");
+            } else if (opcao == 4 ) {
+                pagamentoView.mostrarMensagens("Encerrando! ");
             } else {
                 pagamentoView.mostrarMensagens("Opção inválida, digite novamente: ");
             }
-        } while (opcao != 3);
+        } while (opcao != 4);
         return null;
 
     }

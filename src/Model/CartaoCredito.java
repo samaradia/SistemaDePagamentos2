@@ -4,10 +4,10 @@ public class CartaoCredito extends Pagamentos {
 
     private double limiteDoCartao;
 
-    public CartaoCredito(double valor, double limiteDoCartao) {
+    public CartaoCredito(double valor) {
         super(valor);
-        this.limiteDoCartao = limiteDoCartao;
     }
+
 
     public boolean realizarCompra(double valorDaCompra){
         return valorDaCompra <= limiteDoCartao;
