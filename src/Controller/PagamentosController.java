@@ -1,9 +1,6 @@
 package Controller;
 
-import Model.CartaoCredito;
 import Model.Pagamentos;
-import Model.Pix;
-import View.CartaoCreditoView;
 import View.PagamentoView;
 
 import java.util.Scanner;
@@ -11,11 +8,15 @@ import java.util.Scanner;
 public class PagamentosController {
     private Scanner leitura;
 
+    CartaoCreditoController cartaoCreditoController;
+
     public PagamentosController(Scanner leitura) {
         this.leitura = leitura;
+        this.cartaoCreditoController = new CartaoCreditoController(leitura);
     }
 
     PagamentoView pagamentoView = new PagamentoView();
+
 
     public Pagamentos mostrarMenu() {
         int opcao;
@@ -26,20 +27,25 @@ public class PagamentosController {
             opcao = leitura.nextInt();
 
             if (opcao == 1) {
-                pagamentoView.mostrarMensagens("Digite o valor a ser Pago: ");
+                cartaoCreditoController.fluxoDoCartao();
 
-            } else if (opcao == 2){
+
+            } else if (opcao == 2) {
                 pagamentoView.mostrarMensagens("Digite o valor a ser  pago: ");
-            } else if (opcao == 3 ) {
+
+            } else if (opcao == 3) {
                 pagamentoView.mostrarMensagens("Digite o valor a ser  pago: ");
-            } else if (opcao == 4 ) {
+
+            } else if (opcao == 4) {
                 pagamentoView.mostrarMensagens("Encerrando! ");
+
             } else {
                 pagamentoView.mostrarMensagens("Opção inválida, digite novamente: ");
+
             }
         } while (opcao != 4);
-        return null;
 
+        return null;
     }
 
 }
