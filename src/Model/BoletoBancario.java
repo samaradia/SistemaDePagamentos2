@@ -9,8 +9,17 @@ public class BoletoBancario extends Pagamentos {
         this.diasDeAtraso = diasDeAtraso;
     }
 
+    public BoletoBancario() {
+
+    }
+
     public int getDiasDeAtraso() {
         return diasDeAtraso;
+    }
+
+    public boolean setDiasDeAtraso(int diasDeAtraso) {
+        this.diasDeAtraso = diasDeAtraso;
+        return false;
     }
 
     @Override

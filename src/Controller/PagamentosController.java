@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Pagamentos;
+import View.BoletoBancarioView;
 import View.PagamentoView;
 
 import java.util.Scanner;
@@ -9,13 +10,16 @@ public class PagamentosController {
     private Scanner leitura;
 
     CartaoCreditoController cartaoCreditoController;
+    BoletoBancarioController boletoBancarioController;
 
     public PagamentosController(Scanner leitura) {
         this.leitura = leitura;
         this.cartaoCreditoController = new CartaoCreditoController(leitura);
+        this.boletoBancarioController = new BoletoBancarioController(leitura);
     }
 
     PagamentoView pagamentoView = new PagamentoView();
+    BoletoBancarioView boletoBancarioView  = new BoletoBancarioView();
 
 
     public Pagamentos mostrarMenu() {
@@ -31,7 +35,9 @@ public class PagamentosController {
 
 
             } else if (opcao == 2) {
-                pagamentoView.mostrarMensagens("Digite o valor a ser  pago: ");
+                boletoBancarioController.fluxoDoBoleto();
+
+
 
             } else if (opcao == 3) {
                 pagamentoView.mostrarMensagens("Digite o valor a ser  pago: ");
