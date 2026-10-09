@@ -2,16 +2,17 @@ package Model;
 
 public class Pix extends Pagamentos {
 
-
+    private double valorOriginal;
 
     public Pix(double valor) {
         super(valor);
+        this.valorOriginal = valor;
     }
 
 
     @Override
     public double calcularTaxa() {
-        return valor - (valor * 0.05);
+        return valorOriginal - (valorOriginal * 0.05);
     }
 
     @Override

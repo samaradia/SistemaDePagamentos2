@@ -3,6 +3,7 @@ package Controller;
 import Model.Pagamentos;
 import View.BoletoBancarioView;
 import View.PagamentoView;
+import View.PixView;
 
 import java.util.Scanner;
 
@@ -11,15 +12,18 @@ public class PagamentosController {
 
     CartaoCreditoController cartaoCreditoController;
     BoletoBancarioController boletoBancarioController;
+    PixController pixController;
 
     public PagamentosController(Scanner leitura) {
         this.leitura = leitura;
         this.cartaoCreditoController = new CartaoCreditoController(leitura);
         this.boletoBancarioController = new BoletoBancarioController(leitura);
+        this.pixController = new PixController(leitura);
     }
 
     PagamentoView pagamentoView = new PagamentoView();
     BoletoBancarioView boletoBancarioView  = new BoletoBancarioView();
+    PixView pixView = new PixView();
 
 
     public Pagamentos mostrarMenu() {
@@ -40,7 +44,7 @@ public class PagamentosController {
 
 
             } else if (opcao == 3) {
-                pagamentoView.mostrarMensagens("Digite o valor a ser  pago: ");
+                pixController.fluxoDoPix();
 
             } else if (opcao == 4) {
                 pagamentoView.mostrarMensagens("Encerrando! ");
