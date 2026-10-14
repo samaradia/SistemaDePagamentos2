@@ -28,12 +28,13 @@ public class BoletoBancarioController {
 
         if (diasDeAtraso > 0) {
             boletoBancario.calcularTaxa();
-            {
-                boletoBancario.confirmarPagamento();
-                double valorFinal = boletoBancario.valorFinal();
-                boletoBancarioView.mostrarMensagens("\nO valor final com a taxa 5%: " + valorFinal);
+            boletoBancario.confirmarPagamento();
+            double valorFinal = boletoBancario.valorFinal();
+            boletoBancarioView.mostrarMensagens("\nO valor final com a taxa de 5%: " + valorFinal);
+        }else {
+             boletoBancarioView.mostrarMensagens("Parabéns você não teve nenhum atraso!" +
+                     "\nO valor final do boleto ficou de :" + boletoBancario.valorFinal());
 
-            }
         }
     }
 }
