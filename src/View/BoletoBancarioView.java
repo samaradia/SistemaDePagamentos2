@@ -5,7 +5,7 @@ import Model.BoletoBancario;
 public class BoletoBancarioView {
 
     public void exibirComTaxa(BoletoBancario boletoBancario ){
-        System.out.println("Seu boleto atrasou: " + boletoBancario.getDiasDeAtraso()
+        System.out.println("Seu boleto atrasou: " + boletoBancario.getDiasDeAtraso() + " dias."
                 + "\nO valor do boleto final ficou de: " + boletoBancario.valorFinal());
     }
 

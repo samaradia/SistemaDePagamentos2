@@ -24,16 +24,17 @@ public class BoletoBancarioController {
         double valorPago = leitura.nextDouble();
         boletoBancario.setValor(valorPago);
 
-        boolean podeComprarBoleto = boletoBancario.setDiasDeAtraso(diasDeAtraso);
 
         if (diasDeAtraso > 0) {
             boletoBancario.calcularTaxa();
             boletoBancario.confirmarPagamento();
-            double valorFinal = boletoBancario.valorFinal();
-            boletoBancarioView.mostrarMensagens("\nO valor final com a taxa de 5%: " + valorFinal);
+            boletoBancarioView.exibirComTaxa(boletoBancario);
+            boletoBancarioView.exibirConfirmacao();
         }else {
-             boletoBancarioView.mostrarMensagens("Parabéns você não teve nenhum atraso!" +
-                     "\nO valor final do boleto ficou de :" + boletoBancario.valorFinal());
+            boletoBancario.confirmarPagamento();
+            boletoBancarioView.mostrarMensagens("Parabéns você não teve nenhum atraso!");
+            boletoBancarioView.exibirComTaxa(boletoBancario);
+            boletoBancarioView.exibirConfirmacao();
 
         }
     }
