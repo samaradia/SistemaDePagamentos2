@@ -16,9 +16,9 @@ public class PagamentoView {
         System.out.println("\n" + mensagens);
     }
 
-    public void exibirConfirmacao(Pagamentos pagamentos){
-        System.out.println("Pagamento confirmado de: " + pagamentos.getValor());
-    }
+   // public void exibirConfirmacao(Pagamentos pagamentos){
+    //    System.out.println("Pagamento confirmado de: " + pagamentos.getValor());
+  //  }
 
 
 }

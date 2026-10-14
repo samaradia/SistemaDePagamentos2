@@ -25,15 +25,11 @@ public class CartaoCreditoController {
         cartaoCredito.setValor(valor);
 
         boolean podeComprar = cartaoCredito.realizarCompra(valor);
+        cartaoCreditoView.exibirAutorizacao(podeComprar);
 
         if (podeComprar){
             cartaoCredito.confirmarPagamento();
-
-            double valorFinal = cartaoCredito.valorFinal();
-
-            cartaoCreditoView.mostrarMensagens("\nO valor final com taxa de 3%: " + valorFinal);
-        } else {
-            cartaoCreditoView.mostrarMensagens("\nCompra não autorizada!");
+            cartaoCreditoView.exibirConfirmacao(cartaoCredito);
         }
 
 
